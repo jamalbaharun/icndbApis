@@ -1,0 +1,69 @@
+ext {
+
+    android = [
+            compileSdkVersion : 27,
+            buildToolsVersion : '26.0.2',
+            applicationId     : "id.jmlcode.wpli",
+            minSdkVersion     : 19,
+            targetSdkVersion  : 27,
+            versionCode       : 1,
+            versionName       : "1.0"
+    ]
+
+    def dependVersion = [
+            support           : "27.+",
+            constraint        : "1.0.2",
+            butterknife       : "8.2.1",
+            retrofit          : "2.3.0",
+            okhttp            : "3.6.0",
+            dagger2           : "2.7",
+            leakcanary        : "1.5.4",
+            blockcanary       : "1.2.1"
+    ]
+
+    dependencies = [
+        //base
+        "appcompat-v7"              : "com.android.support:appcompat-v7:${dependVersion.support}",
+        "cardview-v7"               : "com.android.support:cardview-v7:${dependVersion.support}",
+        "recyclerview-v7"           : "com.android.support:recyclerview-v7:${dependVersion.support}",
+        "design"                    : "com.android.support:design:${dependVersion.support}",
+        "constraint"                : "com.android.support.constraint:constraint-layout:${dependVersion.constraint}",
+
+        //rx
+        "rxjava"                    : "io.reactivex.rxjava2:rxjava:2.0.7",
+        "rxandroid"                 : "io.reactivex.rxjava2:rxandroid:2.0.1",
+        "rxpermissions"             : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar",                   //Perimision hardware android
+
+        //network
+        "gson"                      : "com.google.code.gson:gson:2.7",                                          //Menjadikan JSON langsung ke Object atau sebaliknya, Serialize dan Deserialize
+        "retrofit"                  : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",              //Networking library
+        "retrofit-scalar"           : "com.squareup.retrofit2:converter-scalars:${dependVersion.retrofit}",
+        "retrofit-converter-gson"   : "com.squareup.retrofit2:converter-gson:${dependVersion.retrofit}",
+        "retrofit-adapter-rxjava2"  : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.retrofit}",
+        "okhttp"                    : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",
+        "okhttp-logging-interceptor": "com.squareup.okhttp3:logging-interceptor:${dependVersion.okhttp}",
+        "glide"                     : "com.github.bumptech.glide:glide:3.7.0",                                  //Image loader from URL
+        "glide-okhttp3-integration" : "com.github.bumptech.glide:okhttp3-integration:1.4.0@aar",
+
+        //di
+        "dagger"                    : "com.google.dagger:dagger:${dependVersion.dagger2}",                      //Depedency Injection
+        "dagger-compiler"           : "com.google.dagger:dagger-compiler:${dependVersion.dagger2}",
+        "butterknife"               : "com.jakewharton:butterknife:${dependVersion.butterknife}",               //Inject View Android
+        "butterknife-compiler"      : "com.jakewharton:butterknife-compiler:${dependVersion.butterknife}",
+        "annotation"                : "org.glassfish:javax.annotation:10.0-b28",
+
+
+        //multidex
+        "multidex"                  : "com.android.support:multidex:1.0.1",
+
+        //canary
+        "leakcanary-android"        : "com.squareup.leakcanary:leakcanary-android:${dependVersion.leakcanary}",
+        "leakcanary-android-no-op"  : "com.squareup.leakcanary:leakcanary-android-no-op:${dependVersion.leakcanary}",
+        "blockcanary-android"       : "com.github.moduth:blockcanary-android:${dependVersion.blockcanary}",
+        "blockcanary-no-op"         : "com.github.moduth:blockcanary-no-op:${dependVersion.blockcanary}",
+
+        //debug dev
+        "facebook-stetho"           : "com.facebook.stetho:stetho:1.5.0",
+        "stetho-realm"              : "com.uphyca:stetho_realm:2.2.2"
+    ]
+}

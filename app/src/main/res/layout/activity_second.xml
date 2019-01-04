@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"  android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/common_toolbar"
+            layout="@layout/common_toolbar"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/ck_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_noon"
+            android:checked="false"/>
+        <TextView
+            android:id="@+id/result_token"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Token xxxxxxx"/>
+        <TextView
+            android:id="@+id/result_signature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Token xxxxxxx"/>
+
+        <TextView
+            android:id="@+id/result_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Token xxxxxxx"/>
+
+    </LinearLayout>
+</ScrollView>

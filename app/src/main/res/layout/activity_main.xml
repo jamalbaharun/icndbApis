@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/cs_main">
+    <include
+        android:id="@+id/common_toolbar"
+        layout="@layout/common_toolbar"/>
+
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"/>
+
+    <id.jmlcode.sample.widget.CircleImageView
+        android:id="@+id/img_contact"
+        android:layout_height="@dimen/icon_size"
+        android:layout_width="@dimen/icon_size"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        app:border_width="1dp"
+        app:border_color="#000000"
+        android:src="@drawable/ic_menu_black"/>
+
+</LinearLayout>
