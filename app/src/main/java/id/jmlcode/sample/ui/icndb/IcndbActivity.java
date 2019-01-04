@@ -2,15 +2,11 @@ package id.jmlcode.sample.ui.icndb;
 
 import android.content.DialogInterface;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
@@ -128,6 +124,7 @@ public class IcndbActivity extends BaseActivity<IcndbPresenter> implements Icndb
     }
 
     private void loadData() {
-        mPresenter.getJokes(3);
+        count = 3;
+        mPresenter.getJokes(count);
     }
 }
